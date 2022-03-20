@@ -1,0 +1,112 @@
+SDE 1 Questions
+1 how familiar in data structures and array stacks
+Ans- 4 out of 5
+
+2 what is the use in data structures in extract 
+ans- In extract we get unstrutured or poorly strutured data , with help of data structure we can store and access data efficiently.
+
+3 what kind of data structures in upstracts
+Ans- 
+
+4 what is the terms of storing data in array list
+Ans- we can store homogenous data in array in continuous memory location usng indexing .
+
+
+5 arrays and list definition? which is suitable?
+Ans-  arrays is data structure used to store homogenous data 
+      lists is a data structre used to store heterogenous data
+      lists atre suitable in most cases
+      
+6 what is the negative index in arrays?
+Ans - with negative indexing we can access value from the end
+    eg:a=[1,2,3,4,5]
+    a[-1]=5
+    a[-2]=4
+    a[-i]=a[n-i-1]
+    
+7 why do you prefer list always instead of using arrays
+Ans- Lists can easily grow in size, and you can add and remove elements in the middle of the list easily. That cannot be done with arrays. and in array we are not
+able to store heterogenous data but in lists we can store heterogenous data
+
+
+8 is array storing in homogenous?
+ ans- arrays always store homogeneous data and we need to store homogeneous data.
+
+9 where do you store in hetrogenous?
+Ans- we can store in lists
+
+10 where do you use array?
+Ans- to store a collection of homogenous data
+
+11 what about stack circuits?
+Ans - we can construct circuits using stacks.
+
+12 what is diff btw array &array list
+Ans - Lists can easily grow in size, and you can add and remove elements in the middle of the list easily. That cannot be done with arrays. and in array we are not
+able to store heterogenous data but in lists we can store heterogenous data
+
+
+
+13 collection of frame what does it concern
+Ans- like collection of data we can store frames using datastructures
+
+14 types of list in array list
+Ans - single linked lists
+      double linked lists
+      circular linked lists
+      multiple linked lists
+
+15 what about advantages of map
+Ans - stores the data in form of key-value pair
+
+16 why find an element in map is fast
+Ans- since we are stroing the data in  key-value pair we can access the value in o(1) using key.
+
+17 can array list can be an index
+Ans - Yes we can use array list as a key(index) in map 
+
+18 what types of list in array we have in data structures
+Ans- 1d,2d,multi dimensional array
+
+19 advantages of pvs&essential items
+Ans- 
+
+
+
+
+1 find the third largest element in a intergrated array?
+approach: basically i used maxheap concept to get it done in o(n) time complexity and o(n) space comlexity , i can do it in o(nlogn) time with O(1) space complexity
+by sorting the array using best sorting algorithm 
+
+import heapq as h
+arr = [12, 3, 5, 7, 19]
+k = 3
+h._max_heapify(arr)
+for i in range(k):
+  ele=h.heappop(arr)
+print("kth largest element:",ele)
+  
+
+
+
+
+2 reverse the array into subarrays by considering the intern 'n' given
+
+approach: for every n elements in arr i called reverse function with mentionning start-index and end_index 
+it will reverse only elements within those indexes and returns same array
+
+
+def reverse(arr,s,e):
+	if e>len(arr):
+		e=len(arr)-1
+	while s<e:
+		arr[s],arr[e]=arr[e],arr[s]
+		s+=1
+		e-+1
+	return arr
+arr=[1,2,3,4,5,6,7,8,9,10]
+len=len(arr)
+n=2
+for i in range(0,len,n):
+	arr=reverse(arr,i,i+n)
+  
